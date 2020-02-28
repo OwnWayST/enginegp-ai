@@ -2,7 +2,7 @@
 **С помощью клонирования репозитория**
 ```
 apt-get install -y git
-git clone https://gitlab.com/V1adJkee/egpv3-ai
+git clone https://github.com/OwnWayST/enginegp-ai
 cd egpv3-ai
 bash egpv3.sh
 ```

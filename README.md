@@ -1,3 +1,4 @@
+[![BCH compliance](https://bettercodehub.com/edge/badge/OwnWayST/enginegp-ai?branch=master)](https://bettercodehub.com/)
 # Запуск
 **С помощью клонирования репозитория**
 ```

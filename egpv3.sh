@@ -2,7 +2,7 @@
 CODENAME=$(awk -F= '$1=="VERSION_CODENAME" { print $2 ;}' /etc/os-release)
 IPADDR=$(echo "${SSH_CONNECTION}" | awk '{print $3}')
 MIRROR="https://mirror.enginegp.ru"
-GAMES="https://games.gsmanager.ru"
+GAMES="http://games.enginegp.ru"
 COUNTER=1
 MAX_STEPS_CP=8
 MAX_STEPS_CS=6

@@ -4,7 +4,7 @@
 ```
 apt-get install -y git
 git clone https://github.com/OwnWayST/enginegp-ai
-cd egpv3-ai
+cd enginegp-ai
 bash egpv3.sh
 ```
 # Частые ошибки

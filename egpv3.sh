@@ -475,6 +475,7 @@ p7Install() {
 	wget -q https://packages.sury.org/php/apt.gpg 
 	sudo apt-key add apt.gpg  > /dev/null 2>&1
 	echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/php7.list
+	apt-get update > /dev/null 2>&1
 	sudo apt-get install -y php5.6 php5.6-cli php5.6-common php5.6-json php5.6-memcache php5.6-mysql php5.6-curl php5.6-dev php5.6-ssh2 php5.6-gd php5.6-mbstring libapache2-mod-php5.6 php-pear >> /dev/null
 
 	PHPV=$(php5.6 -v)

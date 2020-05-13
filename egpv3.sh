@@ -107,10 +107,10 @@ pmaInstall() {
 }
 
 installPma() {
-	PHPV=$(php7.3 -v)
+	PHPV=$(php5.6 -v)
 
 	if [[ "$PHPV" = "" ]]; then
-		Error "[ERRROR] На Машине не найден PHP7.3"
+		Error "[ERRROR] На Машине не найден php5.6"
 		exit
 	fi	
 
@@ -350,7 +350,7 @@ cpInstall() {
 	npInstall
 	log_t "Установка Apache2 [${COUNTER}/${MAX_STEPS_CP}]"
 	a2Install
-	log_t "Установка PHP 7.3 [${COUNTER}/${MAX_STEPS_CP}]"
+	log_t "Установка PHP 5.6 [${COUNTER}/${MAX_STEPS_CP}]"
 	p7Install
 	log_t "Установка Memcached [${COUNTER}/${MAX_STEPS_CP}]"
 	mcInstall
@@ -475,16 +475,16 @@ p7Install() {
 	wget -q https://packages.sury.org/php/apt.gpg 
 	sudo apt-key add apt.gpg  > /dev/null 2>&1
 	echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/php7.list
-	sudo apt-get install -y php7.3 php7.3-cli php7.3-common php7.3-json php7.3-memcache php7.3-mysql php7.3-curl php7.3-dev php7.3-ssh2 php7.3-gd php7.3-mbstring libapache2-mod-php7.3 php-pear >> /dev/null
+	sudo apt-get install -y php5.6 php5.6-cli php5.6-common php5.6-json php5.6-memcache php5.6-mysql php5.6-curl php5.6-dev php5.6-ssh2 php5.6-gd php5.6-mbstring libapache2-mod-php5.6 php-pear >> /dev/null
 
-	PHPV=$(php7.3 -v)
+	PHPV=$(php5.6 -v)
 
 	if [[ "$PHPV" = "" ]]; then
 		Error "[ERRROR] Ошибка установки PHP 7.3"
 		exit
 	fi	
 
-	a2enmod php7.3 >> /dev/null
+	a2enmod php5.6 >> /dev/null
 	service apache2 restart >> /dev/null
 
 	((COUNTER += 1))
